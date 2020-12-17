@@ -1,5 +1,6 @@
 import 'package:cancha_de_tennis/providers/trabajadores.dart';
-import 'package:cancha_de_tennis/screens/agregar_lugar_screen.dart';
+import 'package:cancha_de_tennis/screens/agregar_trabajador_screen.dart';
+import 'package:cancha_de_tennis/screens/detalle_trabajador_screen.dart';
 import 'package:cancha_de_tennis/screens/lista_trabajadores_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         home: ListaTrabajadoresScreen(),
         routes: {
           AgregarTrabajador.routeName: (context) => AgregarTrabajador(),
+          DetalleTrabajador.routeName: (context) => DetalleTrabajador()
         },
       ),
     );

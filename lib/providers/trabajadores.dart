@@ -28,13 +28,13 @@ class Trabajadores extends ChangeNotifier {
     _items = listaTrabajadores
         .map((item) => Trabajador(
             rut: item['rut'],
-            nombre: item['nombre '],
+            nombre: item['nombre'],
             apellido: item['apellido'],
             domicilio: item['domicilio'],
             cargo: item['cargo'],
             correo: item['correo'],
             telefono: item['telefono'],
-            imagen: item['imagen']))
+            imagen: File(item['imagen'])))
         .toList();
     notifyListeners();
   }
@@ -67,7 +67,7 @@ class Trabajadores extends ChangeNotifier {
       'cargo': nuevoTrabajador.cargo,
       'correo': nuevoTrabajador.correo,
       'telefono': nuevoTrabajador.telefono,
-      'imagen': nuevoTrabajador.imagen
+      'imagen': nuevoTrabajador.imagen.path
     });
   }
 }
